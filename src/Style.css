@@ -1,3 +1,6 @@
+* {
+    text-decoration: none;
+}
 
 body {
     background-color: lavender;
@@ -47,7 +50,8 @@ header nav ul li a {
 header .link3 {
     display: none;
 }
-@media only screen and (min-width: 800px) {
+
+@media only screen and (min-width: 1000px) {
 
     header .logo {
         margin: 30px 0;
@@ -57,6 +61,7 @@ header .link3 {
         border-right: 3px solid darkcyan;
         float: left;
     }
+
     header nav ul {
         margin: 20px 0 0 20px;
         float: left;
@@ -73,13 +78,12 @@ header .link3 {
         font-family: Verdana;
         font-size: 16px;
         color: darkcyan;
+    }
 }
 
 
 
-* {
-    text-decoration: none;
-}
+
 
 .index-bilde-text {
     width: 100%;
@@ -169,3 +173,6 @@ footer ul li a{
     margin-bottom: 10px;
 
 }
+
+}
+
