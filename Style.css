@@ -115,10 +115,15 @@ header nav ul li a {
 .index-bilde-text {
     width: 100%;
     height: calc(100vh - 100px);
-    background-image: url("Skjermbilde 2020-10-16 kl. 16.20.02.png");
+    background-image: url("Skjermbilde 2020-11-15 kl. 23.01.44.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    display: table;
+}
+.index-bilde-text-t {
+    width: 100%;
+    height: calc(100vh - 100px);
     display: table;
 }
 
@@ -133,7 +138,14 @@ header nav ul li a {
     text-align: center;
     font-weight: 500;
     color: white;
-    text-shadow: 2px 2px 8px black;
+    text-shadow: 2px 2px 2px black;
+}
+.index-bilde-text-t h1 {
+    font: Verdana;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 500;
+    color: black;
 }
 
 .index-bilde-text h2 {
@@ -143,9 +155,17 @@ header nav ul li a {
     text-align: center;
     color: white;
     line-height: 50px;
-    text-shadow: 2px 2px 8px black;
+    text-shadow: 2px 2px 2px black;
 }
 
+.index-bilde-text-t h2 {
+    font-style: italic;
+    font: Verdana;
+    font-size: 16px 16px 0px;
+    text-align: center;
+    color: black;
+    line-height: 50px;
+}
 
 .index-knapper div {
     width: calc(100% - 30px);
