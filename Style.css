@@ -168,6 +168,12 @@ header nav ul li a {
 .index-link-to {
    background-color: ghostwhite;
 }
+.index-link-en div {
+    margin: ;
+}
+.index-link-to img {
+    margin: 0 auto;
+}
 
 @media only screen and (min-width: 1000px) {
     .sidekant {
