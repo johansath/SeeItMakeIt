@@ -3,79 +3,87 @@
 }
 
 body {
-    background-color: lavender;
+    background-color: white;
 
 }
 .topp {
-    margin: 0px 0 120px;
-    height: 0px;
+    margin: 0 0 100px;
+    height: 0;
     width: 100%;
+}
+
+.borderboks {
+    width: calc(100% - 55px);
+    height: 1030px;
+    overflow: hidden;
+    margin: 100px auto auto;
+    padding: 10px;
+    display: block;
+    align-content: center;
+}
+.borderboks div {
+    margin: 0 auto;
 }
 
 
 header {
-    background-color: white;
+    background-color: whitesmoke;
     width: screen;
     height: 100px;
     position: fixed;
     top: 0;
     left: 5px;
     right: 5px;
-    border-radius: 0 0 15px 15px;
 }
 
 header .logo {
     font-family: Verdana;
-    font-size: 24px;
-    color: darkcyan;
-    font-weight: 900;
     display: block;
-    text-transform: lowercase;
-    margin: 0 auto;
+    margin: -18px auto;
     text-align: center;
     padding: 20px 0;
 }
 
 header nav ul {
-    display: block;
+    display: none;
     margin: 0 auto;
     width: fit-content;
-
 }
 
 header nav ul li {
-   display: inline-block;
+   display: none;
     float: left;
     list-style: none;
     padding: 0 15px;
+
 }
 
 header nav ul li a {
     text-transform: uppercase;
     font-family: Verdana;
     font-size: 16px;
-    color: darkcyan;
-
-}
-
-header .link3 {
+    color: black;
     display: none;
 }
+
+
+
 
 @media only screen and (min-width: 1000px) {
 
     header .logo {
-        margin: 30px 0;
+        margin: 10px 0;
         text-align: left;
         padding: 0 20px 0 80px;
         line-height: 38px;
-        border-right: 3px solid darkcyan;
         float: left;
     }
 
     header nav ul {
+        display: block;
         margin: 20px 0 0 20px;
         float: left;
+
     }
 
     header nav ul li {
@@ -88,8 +96,15 @@ header .link3 {
     header nav ul li a {
         font-family: Verdana;
         font-size: 16px;
-        color: darkcyan;
+        color: black;
+        display: block;
     }
+    .borderboks {
+        height: 500px;
+        margin: 100px auto auto;
+    }
+
+
 
 }
 
@@ -131,22 +146,27 @@ header .link3 {
     text-shadow: 2px 2px 8px black;
 }
 
+
 .index-knapper div {
-    margin: 15px 15px 0;
     width: calc(100% - 30px);
     height: 150px;
-    background-color: darkcyan;
-    border-radius: 10px;
+
 }
 
 .index-knapper div h3 {
     font: Verdana;
     font-size: 16px 16px 0px;
     text-align: center;
-    color: white;
+    color: black;
     font-weight: 600;
     line-height: 100px;
     text-transform: uppercase;
+}
+.index-link-en {
+   background-color: lightgrey;
+}
+.index-link-to {
+   background-color: ghostwhite;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -162,29 +182,25 @@ header .link3 {
         overflow: hidden;
     }
     .index-knapper div {
-        margin: 20px 10px 0;
-        height: 230px;
-        background-color: darkcyan;
+        margin: 0;
+        height: 250px;
         float: left;
     }
     .index-link-en {
-        width: calc(25% - 20px) !important;
+        width: calc(35.4% - 20px) !important;
     }
     .index-link-to {
-        width: calc(50% - 20px) !important;
+        width: calc(35.4% - 20px) !important;
     }
-    .index-knapper div h3 {
-        line-height: 200px;
-    }
+
+
 }
 
 footer {
     width: calc(100% - 80px);
     padding: 40px 40px;
-    margin-top: 20px;
-    background-color: white;
+    background-color: whitesmoke;
     overflow: hidden;
-    border-radius: 15px 15px 0 0;
 }
 
 footer ul{
@@ -199,22 +215,24 @@ footer ul li{
 }
 footer ul li a{
     font-family: Verdana;
-    font-size: 25px;
-    color: darkcyan;
-    line-height: 20px;
+    font-size: 18px;
+    color: black;
+    line-height: 35px;
 
 
 }
 
 .footer-some {
-    width: 50px;
+    width: 100px;
     float: right;
+    margin: auto;
+    display: block;
 
 }
 
 .footer-some img {
     width: 100%;
-    margin-bottom: 10px;
+
 
 }
 

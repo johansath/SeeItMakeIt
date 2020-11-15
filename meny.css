@@ -1,0 +1,196 @@
+/*.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border: 3px solid black;
+    z-index: 1;
+}
+
+.menu-button {
+    width: 50px;
+    height: 6px;
+    background: black;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-button::before,
+.menu-button::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: black;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-button::before {
+    transform: translateY(-16px);
+}
+
+.menu-button::after {
+    transform: translateY(16px);
+}
+
+ animasjon
+
+.menu-btn.open .menu-button {
+    transform: translateX(-50);
+    background: transparent;
+}
+
+.menu-btn.open .menu-button::before {
+    transform: rotate(45deg) translate(35px -35px);
+}
+
+.menu-btn.open .menu-button::after {
+    transform: rotate(-5deg) translate(35px 35px);
+} */
+
+:root {
+    --primary-color: rgba(13, 110, 139, 0.75);
+    --overlay-color: rgba(24, 39 51, 0.85);
+    --menu-speed: 0.75s;
+}
+
+
+
+.menu-wrap .toggler {
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    z-index: 2;
+}
+
+.menu-wrap .hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* hamburger linjer*/
+.menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+/* øverst og nederste linje styling */
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    width: 100%;
+    height: 6px;
+    background: inherit;
+}
+/* flytter en linje ned*/
+.menu-wrap .hamburger > div:after {
+    top: 20px;
+}
+
+/* animasjon av toggler */
+
+.menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+/* lag X av linjer */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* roter med hover*/
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
+
+/* vis meny*/
+.menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+}
+.menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu {
+    top: 0;
+    right: 0;
+    position: fixed;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu {
+    width: 100%;
+}
+.menu-wrap .menu > div {
+    background: whitesmoke;
+    border-radius: 50px;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    tansform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+
+}
+.menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: black;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+
+
